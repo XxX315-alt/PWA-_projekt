@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unos vijesti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">debate</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">HOME</a></li>
+        <li><a href="mundo.php">MUNDO</a></li>
+        <li><a href="deporte.php">DEPORTE</a></li>
+        <li><a href="unos.html" class="active">UNOS</a></li>
+        <li><a href="administrator.php">ADMINISTRACJA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2>Unos nove vijesti</h2>
+      <form name="unosForma" action="skripta.php" method="POST" enctype="multipart/form-data">
+        <div class="form-item">
+          <label for="title">Naslov vijesti</label><br>
+          <input type="text" name="title" required>
+        </div>
+
+        <div class="form-item">
+          <label for="about">Kratki sadržaj vijesti (do 50 znakova)</label><br>
+          <textarea name="about" rows="4" cols="50" maxlength="50" required></textarea>
+        </div>
+
+        <div class="form-item">
+          <label for="content">Sadržaj vijesti</label><br>
+          <textarea name="content" rows="10" cols="50" required></textarea>
+        </div>
+
+        <div class="form-item">
+          <label for="category">Kategorija:</label><br>
+          <select name="category" id="category">
+          <option value="mundo">Mundo</option>
+          <option value="deporte">Deporte</option>
+          </select><br><br>
+        </div>
+
+        <div class="form-item">
+          <label for="pphoto">Slika</label><br>
+          <input type="file" name="pphoto" accept="image/*" required>
+        </div>
+
+        <div class="form-item">
+          <label>
+            <input type="checkbox" name="archive"> Prikazati na stranici
+          </label>
+        </div>
+
+        <div class="form-item">
+          <button type="reset">Poništi</button>
+          <button type="submit">Prihvati</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Copyright EL DEBATE. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
